@@ -10,6 +10,8 @@ import reducer from '../src/reducers'
 import { MemoryRouter as Router } from 'react-router-dom' // eslint-disable-line
 import history from '../src/history'
 
+window.MessageChannel = require('worker_threads').MessageChannel;
+
 /*
  * Mock Redux
  */
