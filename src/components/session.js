@@ -11,10 +11,10 @@ const submit = ref => props => event => {
   return false
 }
 
-const Session = props => {
+const Session = ({actions}) => {
   const nameRef = React.createRef()
   return <form action="/"
-    onSubmit={submit(nameRef)({actions: props.actions})}>
+    onSubmit={submit(nameRef)({actions})}>
     <h2>Login</h2>
     <label htmlFor="name">Name</label>
     <input type="text" id="name" name="name" ref={nameRef} />
