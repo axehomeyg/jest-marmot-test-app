@@ -2912,10 +2912,10 @@ jest-leak-detector@^24.9.0:
     jest-get-type "^24.9.0"
     pretty-format "^24.9.0"
 
-jest-marmot@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/jest-marmot/-/jest-marmot-1.0.16.tgz#4b13d3df80bf4ee2fb3df00dccf96569ce1eb1d4"
-  integrity sha512-oZzeZSgMzo40/3xdpE42ugEUyFnqohpdh9jEa8mvkdFFHaQF84HrhaHGVfJO54FpC1C4JHS18Aoa8sHfk3T5Mw==
+jest-marmot@^1.0.21:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/jest-marmot/-/jest-marmot-1.0.21.tgz#b82d19b246a79499f0d378b524fbfe1688dbc729"
+  integrity sha512-avF06iQRkK84H5SAKjAv1q6SeI9Q3W0I/ax6WATlv766L4zPPgC7GGj5xOwbevOLGwNCBL4VOTESS5ATzv5LPQ==
   dependencies:
     "@testing-library/react" "^9.3.2"
     "@testing-library/user-event" "^8.0.3"
