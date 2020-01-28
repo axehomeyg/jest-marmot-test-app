@@ -7,7 +7,9 @@ const submit = ref => props => event => {
   props
     .actions
     .signup(ref.current.value)
-    .then(() => props.actions.gotoWelcome())
+
+  props.actions.gotoWelcome()
+
   return false
 }
 

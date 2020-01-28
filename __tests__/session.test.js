@@ -1,6 +1,9 @@
 import React from 'react'
 import Marmot, {scenario, stubMessageChannel} from 'jest-marmot'
 import App from '../src/components/app'
+import Pure from '../src/pure'
+import ReactDOM from 'react-dom';
+import { act } from 'react-dom/test-utils';
 
 // Redux/Router Mocks
 import { applyMiddleware, createStore }  from 'redux'
@@ -11,6 +14,7 @@ import { MemoryRouter as Router } from 'react-router-dom' // eslint-disable-line
 import history from '../src/history'
 
 stubMessageChannel()
+
 /*
  * Mock Redux
  */
@@ -45,12 +49,21 @@ const common = ({
 // Marmot.on('begin')(opts => opts.data && Mocks.mockBackend(opts.data))
 // Marmot.on('cleanup')(done => console.log("Cleaning UP", done)) // Mocks.reset())
 
-
+const root = document.createElement('div');
+document.body.appendChild(root);
 
 Marmot.root(() => <App />)
+// Marmot.root(() => <Pure/>)
 Marmot.router(() => history)
-Marmot.renderer((child, opts) => withRouter(child, opts.route))
-Marmot.renderer(child => withProvider(createMockStore({}))(child))
+// Marmot.renderer((child, opts) => withRouter(child, opts.route))
+//
+Marmot.renderer(child => {
+  return withProvider(createMockStore({}))(child)
+})
+
+Marmot.renderer(child => {
+  return  ReactDOM.render(child, root)
+})
 
 // Fixture
 const names = [

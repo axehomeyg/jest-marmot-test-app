@@ -1,9 +1,7 @@
 // Thunk
-export const signup = name => dispatch => (
-  Promise.resolve(
-    dispatch({
-      type: 'SET_NAME',
-      name})))
+export const signup = name => ({
+  type: 'SET_NAME',
+  name})
 
 // regular
 export const gotoWelcome = () => ({

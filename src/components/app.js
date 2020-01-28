@@ -5,7 +5,7 @@ import Session from './session'
 import Welcome from './welcome'
 
 const App = ({page}) => ((page == 'welcome') ?
-  <Welcome /> :
+  <Welcome/> :
   <Session />)
 
 App.propTypes = {
