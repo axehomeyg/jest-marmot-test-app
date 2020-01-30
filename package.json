@@ -20,7 +20,7 @@
     "eslint-plugin-react": "^7.13.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "jest": "^25.1.0",
-    "jest-marmot": "^1.0.24",
+    "jest-marmot": "^1.0.26",
     "jsdom": "^16.0.1",
     "jsdom-global": "^3.0.2",
     "react": "^16.8.6",
